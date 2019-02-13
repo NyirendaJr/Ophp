@@ -7,4 +7,5 @@ require "config.php";
 
 use Models\Database;
 
+//create database object
 new Database();
