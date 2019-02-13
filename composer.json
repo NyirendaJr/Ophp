@@ -11,8 +11,10 @@
         }
     ],
     "license": "MIT",
-    "require": {"illuminate/database": "5.1.8",
-        "robmorgan/phinx": "^0.10.6"},
+    "require": {
+        "illuminate/database": "5.1.8",
+        "robmorgan/phinx": "^0.10.6"
+    },
     "autoload": {
         "psr-4": {
             "Controllers\\": "app/controllers",
