@@ -10,6 +10,7 @@
             "role": "Developer"
         }
     ],
+    "license": "MIT",
     "require": {"illuminate/database": "5.1.8",
         "robmorgan/phinx": "^0.10.6"},
     "autoload": {
