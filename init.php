@@ -1,11 +1,8 @@
 <?php
 
 require "vendor/autoload.php";
-
-// load database configuration file
-require "config.php";
+require __DIR__."/config/database.php";
 
 use Models\Database;
 
-//create database object
 new Database();

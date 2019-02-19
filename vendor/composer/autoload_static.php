@@ -18,6 +18,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -25,6 +29,7 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
             'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
@@ -38,6 +43,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'M' => 
         array (
             'Models\\' => 7,
+        ),
+        'K' => 
+        array (
+            'Klein\\' => 6,
         ),
         'I' => 
         array (
@@ -53,6 +62,7 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'C' => 
         array (
             'Controllers\\' => 12,
+            'Config\\' => 7,
             'Cake\\Utility\\' => 13,
             'Cake\\Log\\' => 9,
             'Cake\\Datasource\\' => 16,
@@ -64,6 +74,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -83,6 +97,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\Routing\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/routing',
         ),
         'Symfony\\Component\\Filesystem\\' => 
         array (
@@ -112,6 +130,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         array (
             0 => __DIR__ . '/../..' . '/app/models',
         ),
+        'Klein\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/support',
@@ -135,6 +157,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/controllers',
+        ),
+        'Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config',
         ),
         'Cake\\Utility\\' => 
         array (
@@ -170,12 +196,23 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

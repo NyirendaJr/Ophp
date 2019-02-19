@@ -12,5 +12,10 @@ class Users{
         return $user;
 
     }
+
+    public static function get_all_user(){
+        $users = User::all();
+        return $users;
+    }
 }
 ?>
