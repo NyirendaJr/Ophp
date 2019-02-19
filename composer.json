@@ -11,7 +11,7 @@
         },
         {
             "name": "Paul Manoni",
-            "email": "user@gmail.com",
+            "email": "01paulmanoni@gmail.com",
             "homepage": "http://www.devpyjoh.com",
             "role": "Developer"
         }
@@ -27,8 +27,8 @@
     "autoload": {
         "psr-4": {
             "Controllers\\": "app/controllers",
-            "Models\\":"app/models",
-            "Config\\":"config"
+            "Models\\": "app/models",
+            "Config\\": "config"
         }
     }
 }

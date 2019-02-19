@@ -4,12 +4,15 @@ use Config\View;
 use Config\Route;
 require __DIR__."/../views.php";
 
-Route::path("GET","/",function(){
-    return homeView();
+Route::path("/",function($request){
+    return homeView($request);
 });
 
-Route::path("GET","/about",function(){
-    return aboutView();
+Route::path("/about/[:name]/[:name2]",function($request){
+    return aboutView($request);
 });
 
+Route::path("POST","/post_name", function($request){
+    return post_name($request);
+});
 
