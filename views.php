@@ -1,19 +1,27 @@
 <?php
 //use Config\View;
-require "config/view.php";
+require "config/View.php";
 use Controllers\Users;
 
-function homeView(){
-    $users = Users::get_all_user();
+function homeView($request){
+    // $users = Users::get_all_user();
 
     return View::render("welcome.html",[
         "title"=>"devpyjoh starter",
-        "users"=> $users
+        // "users"=> $users
     ]);
 
 }
 
-function aboutView(){
+function aboutView($request){
+    echo "<pre>";
+    var_dump($request);
     return View::render("about.html");
 }
 
+
+function post_name($request){
+    if($_POST['name']){
+        print($_POST['name']);
+    }
+}

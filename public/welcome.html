@@ -9,17 +9,8 @@
     <title>{{ title }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../public/assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            padding-top: 5rem;
-            }
-        .starter-template {
-            padding: 3rem 1.5rem;
-            text-align: center;
-            }
-    </style>
+    <link href="{{ static('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ static('assets/css/style.css') }}" rel="stylesheet">
   </head>
 
   <body>
@@ -28,6 +19,11 @@
         <h1>Devpyjoh Starter</h1>
         <p class="lead">A Simple PHP Framework for web Applications</p>
       </div>
+
+      <form action="/post_name" method="post">
+      <input type="text" name="name"><br>
+      <input type="submit" value="submit">
+      </form>
     </main>
   </body>
 </html>
