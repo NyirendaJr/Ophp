@@ -22,13 +22,19 @@
         "robmorgan/phinx": "^0.10.6",
         "symfony/routing": "^4.2",
         "klein/klein": "^2.1",
-        "twig/twig": "^2.6"
+        "twig/twig": "^2.6",
+        "symfony/twig-bridge": "^4.2",
+        "symfony/form": "^4.2",
+        "symfony/security-csrf": "^4.2",
+        "symfony/translation": "^4.2",
+        "symfony/config": "^4.2"
     },
     "autoload": {
         "psr-4": {
             "Controllers\\": "app/controllers",
             "Models\\": "app/models",
-            "Config\\": "config"
+            "Config\\": "config",
+            "Form\\": "config/form"
         }
     }
 }

@@ -3,14 +3,11 @@ namespace Controllers;
 use Models\User;
 class Users{
 
-    public static function create_user($username, $password){
+    public static function create_user($username){
         $user = User::create([
-            'username' => $username,
-            'password' => $password
+            'name' => $username,
         ]);
-
         return $user;
-
     }
 
     public static function get_all_user(){
