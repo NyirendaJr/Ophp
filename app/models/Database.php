@@ -9,10 +9,10 @@ class Database {
         $capsule = new Capsule;
         $capsule->addConnection([
             'driver' => DB_DRIVER,
-            'host' => DB_HOST,
-            'database' => DB_NAME,
-            'username' => DB_USER,
-            'password' => DB_PASS,
+            'host' => '127.0.0.1',
+            'database' => 'devpyjoh-starter',
+            'username' => 'root',
+            'password' => 'manpaul1994',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

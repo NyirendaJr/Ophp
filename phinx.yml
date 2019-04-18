@@ -8,9 +8,9 @@ environments:
     production:
         adapter: mysql
         host: localhost
-        name: production_db
+        name: devpyjoh-starter
         user: root
-        pass: ''
+        pass: 'manpaul1994'
         port: 3306
         charset: utf8
 
@@ -19,16 +19,16 @@ environments:
         host: localhost
         name: devpyjoh-starter
         user: root
-        pass: ''
+        pass: 'manpaul1994'
         port: 3306
         charset: utf8
 
     testing:
         adapter: mysql
         host: localhost
-        name: testing_db
+        name: devpyjoh-starter
         user: root
-        pass: ''
+        pass: 'manpaul1994'
         port: 3306
         charset: utf8
 
