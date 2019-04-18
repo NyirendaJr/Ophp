@@ -1,13 +1,14 @@
 <?php
 namespace Config;
+use \Twig\Extension\AbstractExtension;
 // this is the extension help to build twig custom features
-class Filter extends \Twig\Extension\AbstractExtension
+class Filter extends AbstractExtension
 {
     public function getFunctions()
     {
         return [
-            new \Twig\TwigFunction('static', [$this, 'static']),
-            new \Twig\TwigFunction('route', [$this, 'route']),
+            new \Twig\TwigFunction('render_static', [$this, 'static']),
+            new \Twig\TwigFunction('render_route', [$this, 'route']),
         ];
     }
 

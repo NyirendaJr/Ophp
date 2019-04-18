@@ -12,26 +12,12 @@ use Phinx\Db\Table\Table;
 class HomeView extends GlobalView
 {
     public function get($request,$response){
-        // $funct = new ReflectionParameter(["CreateUserTable","change"],'table');
-        $funct = new ReflectionMethod("CreateUserTable","changes");
-        $params = $funct->getStaticVariables();
-        $class_vars = get_class_vars("CreateUserTable");
-        var_dump($class_vars);
-        $defaults = [
-            'dueDate' => new \DateTime('tomorrow'),
-        ];
         $form = Form::createForm([
-            'task'=>'text',
-            'tasks'=>'text',
-        ],$defaults);
-        return View::render("welcome.html.twig",[
-            "title"=>"devpyjoh starter",
-            'form' => $form,
+            'Email'=>'email',
+            'Password' => 'text'
         ]);
-    } 
-    public function post($request,$response){
-        // return $response->redirect("/about")->send();
-    } 
+        return View::render("welcome.html.twig",["title"=>"devpyjoh starter",'form' => $form,]);
+    }
 }
 
 class AboutView extends GlobalView

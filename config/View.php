@@ -32,7 +32,7 @@ class View{
         $csrfGenerator = new UriSafeTokenGenerator();
         $csrfManager = new CsrfTokenManager($csrfGenerator, $csrfStorage);
         $loader = realpath(__DIR__.'/../public');
-        $defaultFormTheme = 'form_div_layout.html.twig';
+        $defaultFormTheme = 'bootstrap_4_layout.html.twig';
         $appVariableReflection = new \ReflectionClass('\Symfony\Bridge\Twig\AppVariable');
         $vendorTwigBridgeDirectory = dirname($appVariableReflection->getFileName());
 
