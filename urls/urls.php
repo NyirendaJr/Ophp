@@ -2,14 +2,13 @@
 
 use Config\View;
 use Config\Route;
+use Config\GlobalView;
 require __DIR__."/../views.php";
 
-Route::path("GET","/",function(){
-    return homeView();
+Route::path("/",function($request,$response){
+    return HomeView::as_view($request,$response);
 });
 
-Route::path("GET","/about",function(){
-    return aboutView();
+Route::path("/about",function($request,$response){
+    return AboutView::as_view($request,$response);
 });
-
-
