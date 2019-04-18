@@ -11,13 +11,8 @@
         },
         {
             "name": "Paul Manoni",
-<<<<<<< HEAD
             "email": "user@gmail.com",
             "homepage": "http://www.thelabdev.com",
-=======
-            "email": "01paulmanoni@gmail.com",
-            "homepage": "http://www.devpyjoh.com",
->>>>>>> 3e39136b0c4d52a9a14d6214a0010acfbed16fc0
             "role": "Developer"
         }
     ],

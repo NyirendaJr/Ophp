@@ -12,11 +12,11 @@ use Phinx\Db\Table\Table;
 class HomeView extends GlobalView
 {
     public function get($request,$response){
-        $form = Form::createForm([
-            'Email'=>'email',
-            'Password' => 'text'
-        ]);
-        return View::render("welcome.html.twig",["title"=>"devpyjoh starter",'form' => $form,]);
+        // $form = Form::createForm([
+        //     'Email'=>'email',
+        //     'Password' => 'text'
+        // ]);
+        return View::render("welcome.html.twig",["title"=>"devpyjoh starter"]);
     }
 }
 
