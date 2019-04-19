@@ -1,27 +1,35 @@
 <?php
+
 namespace Config;
+
 use Klein\Klein;
 
-class Route{
-    public static function path($pattern, $file_location){
+class Route
+{
+    public static function path($pattern, $file_location)
+    {
         try {
-            $klein = new Klein(); 
-            if (preg_match("/^(?:(?:\/)?(?:.*))|(?:(?:\/))/",$pattern,$matches)) {
-                $klein->respond($pattern, $file_location);
+            $klein = new Klein();
+            if (preg_match("/^(?:(?:\/)?(?:.*))|(?:(?:\/))/", $pattern, $matches)) {
+                $klein->respond($pattern, function ($request,$response,$service,$app) use($file_location){
+                    $num_args = func_get_args();
+                    return call_user_func_array([$file_location,'as_view'],$num_args);
+                });
                 $klein->dispatch();
             }
         } catch (\Throwable $th) {
-            print($th->getMassage());
+             var_dump($th->getMassage());
         }
     }
 
 
-    public static function message($err_msg){
+    public static function message($err_msg)
+    {
         $klein = new Klein();
         $klein->onError(function ($klein, $err_msg) {
             $klein->service()->flash($err_msg);
             $klein->service()->back();
         });
     }
-    
+
 }

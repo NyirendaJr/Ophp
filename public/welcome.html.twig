@@ -20,8 +20,8 @@
         <p class="lead">A Simple PHP Framework for web Applications</p>
       </div>
       <form action="/" method="POST">
-      {{form_row(form.Email) }}
-      {{form_row(form.Password) }}
+      {{form_row(form.email,{'attr':{'class':'col-md-4'},'label':'Email'}) }}
+      {{form_row(form.password,{'attr':{'class':'col-md-4'},'label':'Password'}) }}
       <input type="submit" class="btn btn-class" value="Submit">
       </form>
     </main>

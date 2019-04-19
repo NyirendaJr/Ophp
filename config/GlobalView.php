@@ -1,23 +1,12 @@
 <?php
 namespace Config;
 abstract class GlobalView{
-    public static function as_view($request,$response){
+    public static function as_view(){
         try {
-            switch ($request->method()) {
-                case 'GET':
-                    return static::get($request,$response);
-                    break;
-                case 'POST':
-                    return static::post($request,$response);
-                    break;
-                default:
-                    return static::get($request,$response);
-                    break;
-            }
-            
+            $num_args = func_get_args();
+            return call_user_func_array([static::class,"get"],$num_args);
         } catch (\Throwable $th) {
-           print($th->getMessage());
+           echo $th->getMessage();
         }
-        
     }
 }

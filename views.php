@@ -13,10 +13,14 @@ class HomeView extends GlobalView
 {
     public function get($request,$response){
         $form = Form::createForm([
-            'Email'=>'email',
-            'Password' => 'text'
+            'email'=>'email',
+            'password' => 'text'
         ]);
         return View::render("welcome.html.twig",["title"=>"devpyjoh starter",'form' => $form,]);
+    }
+
+    public function data_me(){
+        return "Hello";
     }
 }
 
@@ -26,5 +30,9 @@ class AboutView extends GlobalView
         return View::render("about.html.twig",[
             "title"=>"devpyjoh starter",
         ]);
+    }
+
+    public function data_me(){
+        return "Hello";
     }
 }
