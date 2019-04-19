@@ -40,6 +40,7 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
             'Symfony\\Component\\Form\\' => 23,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Bridge\\Twig\\' => 20,
@@ -151,6 +152,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
         ),
         'Symfony\\Component\\Console\\' => 
         array (

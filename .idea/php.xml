@@ -41,6 +41,7 @@
       <path value="$PROJECT_DIR$/vendor/cakephp/collection" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
     </include_path>
   </component>
 </project>

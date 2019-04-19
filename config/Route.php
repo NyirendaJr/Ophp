@@ -18,7 +18,7 @@ class Route
                 $klein->dispatch();
             }
         } catch (\Throwable $th) {
-             var_dump($th->getMassage());
+             error_log($th->getTraceAsString(),4);
         }
     }
 
