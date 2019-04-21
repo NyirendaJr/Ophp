@@ -35,7 +35,8 @@
             "Controllers\\": "app/controllers",
             "Models\\": "app/models",
             "Config\\": "config",
-            "Form\\": "config/form"
+            "Form\\": "config/form",
+            "System\\": "."
         }
     }
 }

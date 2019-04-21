@@ -11,7 +11,7 @@ class Route
         try {
             $klein = new Klein();
             if (preg_match("/^(?:(?:\/)?(?:.*))|(?:(?:\/))/", $pattern, $matches)) {
-                $klein->respond($pattern, function ($request,$response,$service,$app) use($file_location){
+                $klein->respond($pattern, function ($request,$response,$service,$app) use($klein,$file_location){
                     $num_args = func_get_args();
                     return call_user_func_array([$file_location,'as_view'],$num_args);
                 });

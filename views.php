@@ -20,17 +20,17 @@ use Phinx\Db\Table\Table;
 
 class HomeView extends GlobalView
 {
-    public function get($request,$response){
+    public function get($request,$response, $service){
         $form = Form::createForm([
             'email'=>'email',
-            'password' => 'text'
+            'password' => 'text',
         ]);
         return View::render("welcome.html.twig",["title"=>"devpyjoh starter",'form' => $form,]);
     }
 
-    public function post($request,$response){
-        error_log("Hello hello me",4);
-        $response->redirect("/users/$request->user->id/listings")->send();
+    public function post($request,$response,$service)
+    {
+        View::redirect("/about");
     }
 }
 
@@ -49,8 +49,10 @@ class AboutView extends GlobalView
 
     public function post($request,$response, $service){
         error_log($request->uri(),4);
-        $this->response->redirect('/login')->send();
+        $response->redirect('/login')->send();
     }
 }
+
+
 
 
