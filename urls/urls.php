@@ -7,4 +7,4 @@ require __DIR__."/../views.php";
 
 Route::path("/",new HomeView());
 
-Route::path("/about",new AboutView());
+Route::path("/about/",new AboutView());

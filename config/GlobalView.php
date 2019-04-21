@@ -25,6 +25,7 @@ abstract class GlobalView{
             $code = $th->getCode();
             $file = $th->getFile();
             error_log("[{$file}][line: {$line}]".$th->getMessage(),4);
+            die();
         }
     }
 }

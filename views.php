@@ -21,6 +21,9 @@ use Phinx\Db\Table\Table;
 class HomeView extends GlobalView
 {
     public function get($request,$response, $service){
+        if (isset($_GET['name'])){
+            return "Hello world2";
+        }
         $form = Form::createForm([
             'email'=>'email',
             'password' => 'text',
@@ -37,6 +40,10 @@ class HomeView extends GlobalView
 class AboutView extends GlobalView
 {
     public function get($request,$response){
+        if (isset($_GET['name'])){
+            error_log("Hello",4);
+            return "Hello world2";
+        }
         $form = Form::createForm([
             'email'=>'email',
             'password' => 'text'
@@ -48,8 +55,7 @@ class AboutView extends GlobalView
     }
 
     public function post($request,$response, $service){
-        error_log($request->uri(),4);
-        $response->redirect('/login')->send();
+        View::redirect("/");
     }
 }
 

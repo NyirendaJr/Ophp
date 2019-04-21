@@ -55,7 +55,7 @@ class View{
 
     public static function redirect($url){
         if (headers_sent()){
-            die('<script type="text/javascript">window.location=\''.$url.'\';</script‌​>');
+            die('<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">');
         }else{
             header('Location: ' . $url);
             die();
