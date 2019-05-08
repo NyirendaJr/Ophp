@@ -20,14 +20,6 @@ class View{
 
         // creates the Translator
         $translator = new Translator('en');
-        // somehow load some translations into it
-        // $translator->addLoader('xlf', new XliffFileLoader());
-        // $translator->addResource(
-        //     'xlf',
-        //     __DIR__.'/vendor/symfony/translations/messages.en.xlf',
-        //     'en'
-        // );
-
         $csrfStorage = new NativeSessionTokenStorage();
         $csrfGenerator = new UriSafeTokenGenerator();
         $csrfManager = new CsrfTokenManager($csrfGenerator, $csrfStorage);
@@ -36,7 +28,6 @@ class View{
         $appVariableReflection = new \ReflectionClass('\Symfony\Bridge\Twig\AppVariable');
         $vendorTwigBridgeDirectory = dirname($appVariableReflection->getFileName());
 
-        
         $twig = new Environment(new FilesystemLoader([
             $loader,
             $vendorTwigBridgeDirectory.'/Resources/views/Form',

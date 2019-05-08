@@ -12,7 +12,7 @@ class Database {
             'host' => '127.0.0.1',
             'database' => 'devpyjoh-starter',
             'username' => 'root',
-            'password' => 'manpaul1994',
+            'password' => '',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

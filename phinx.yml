@@ -10,7 +10,7 @@ environments:
         host: localhost
         name: devpyjoh-starter
         user: root
-        pass: 'manpaul1994'
+        pass: ''
         port: 3306
         charset: utf8
 
@@ -19,7 +19,7 @@ environments:
         host: localhost
         name: devpyjoh-starter
         user: root
-        pass: 'manpaul1994'
+        pass: ''
         port: 3306
         charset: utf8
 
@@ -28,7 +28,7 @@ environments:
         host: localhost
         name: devpyjoh-starter
         user: root
-        pass: 'manpaul1994'
+        pass: ''
         port: 3306
         charset: utf8
 

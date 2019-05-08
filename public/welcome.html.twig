@@ -18,28 +18,15 @@
       <div class="starter-template">
         <h1>Devpyjoh Starter</h1>
         <p class="lead">A Simple PHP Framework for web Applications</p>
-        <a href="/about">about</a>
+        <a href="/about" class="btn btn-success">Create New User</a>
+        <br>
+        <ul class="list-group">
+          <li class="list-group-item">LIST OF USERS</li>
+          {% for user in users %}
+            <li class="list-group-item">{{ user.name }}</li>
+          {% endfor %}
+        </ul>
       </div>
-      <button type="button" id="test">Test</button>
-      <form action="/" method="POST" id="hello">
-      {{form_row(form.email,{'attr':{'class':'col-md-4'},'label':'Email'}) }}
-      {{form_row(form.password,{'attr':{'class':'col-md-4'},'label':'Password'}) }}
-      <input type="submit" class="btn btn-class " id="submit" value="Submit">
-      </form>
     </main>
-    <script>
-      var xhttp = new  XMLHttpRequest();
-      document.getElementById("test").addEventListener("click",function(e){
-        e.preventDefault();
-
-        xhttp.open("GET","/about/?name=Helloworld", true);
-        xhttp.onreadystatechange =()=>{
-          if (xhttp.readyState == 4 && xhttp.status == 200){
-              console.log(xhttp.response);
-          }
-        }
-        xhttp.send();
-      });
-    </script>
   </body>
 </html>

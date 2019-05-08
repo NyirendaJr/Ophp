@@ -1,3 +1,28 @@
-<h1>This is about us page {{name}}</h1>
-{{email}}
-<a href="/">Home</a>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A Simple PHP Framework for web Applications">
+    <meta name="author" content="peter nyirenda">
+
+    <title>{{ title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ render_static('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ render_static('assets/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<main role="main" class="container">
+    <div class="starter-template">
+        <form action="/about" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</main>
+</body>

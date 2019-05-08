@@ -25,6 +25,7 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         ),
         'S' => 
         array (
+            'System\\' => 7,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\' => 18,
@@ -48,6 +49,7 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Phinx\\' => 6,
         ),
@@ -92,6 +94,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'System\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -172,6 +178,10 @@ class ComposerStaticInit7f9263a776034105aa9089cdd3ef63e9
         'Stringy\\' => 
         array (
             0 => __DIR__ . '/..' . '/danielstjules/stringy/src',
+        ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
         'Psr\\Log\\' => 
         array (
