@@ -12,6 +12,6 @@ Licensed under the [MIT license](https://opensource.org/licenses/MIT).
 ## Installation
 
 ```sh
-composer create-project devpyjoh/devpyjoh-starter project-name
+composer create-project olphp/olphp project-name
 ```
 
