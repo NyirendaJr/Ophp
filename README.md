@@ -1,4 +1,4 @@
-# Devpyjoh starter
+# OLPHP
 A Simple PHP Framework for creating web applications
 
 [![Latest Version](https://img.shields.io/github/tag/NyirendaJr/devpyjoh-starter.svg)](https://github.com/NyirendaJr/devpyjoh-starter/releases)
