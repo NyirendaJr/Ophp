@@ -275,6 +275,11 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="framework" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" host="0.0.0.0" port="8000">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -468,7 +473,6 @@
           <folding>
             <element signature="e#21#43#0#PHP" expanded="true" />
           </folding>
-
         </state>
       </provider>
 =======

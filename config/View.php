@@ -1,9 +1,7 @@
 <?php
 namespace Config;
-use Config\Filter;
 use \Twig\Environment;
 use \Twig\Loader\FilesystemLoader;
-use Symfony\Component\Form\Forms;
 use Symfony\Bridge\Twig\Extension\FormExtension;
 use Symfony\Component\Form\FormRenderer;
 use Symfony\Bridge\Twig\Form\TwigRendererEngine;
@@ -12,7 +10,6 @@ use Symfony\Component\Security\Csrf\TokenStorage\NativeSessionTokenStorage;
 use Symfony\Component\Security\Csrf\TokenGenerator\UriSafeTokenGenerator;
 use Symfony\Component\Security\Csrf\CsrfTokenManager;
 use Symfony\Component\Translation\Translator;
-use Symfony\Component\Translation\Loader\XliffFileLoader;
 use Symfony\Bridge\Twig\Extension\TranslationExtension;
 
 class View{
@@ -20,6 +17,14 @@ class View{
 
         // creates the Translator
         $translator = new Translator('en');
+        // somehow load some translations into it
+        // $translator->addLoader('xlf', new XliffFileLoader());
+        // $translator->addResource(
+        //     'xlf',
+        //     __DIR__.'/vendor/symfony/translations/messages.en.xlf',
+        //     'en'
+        // );
+
         $csrfStorage = new NativeSessionTokenStorage();
         $csrfGenerator = new UriSafeTokenGenerator();
         $csrfManager = new CsrfTokenManager($csrfGenerator, $csrfStorage);
@@ -28,6 +33,7 @@ class View{
         $appVariableReflection = new \ReflectionClass('\Symfony\Bridge\Twig\AppVariable');
         $vendorTwigBridgeDirectory = dirname($appVariableReflection->getFileName());
 
+        
         $twig = new Environment(new FilesystemLoader([
             $loader,
             $vendorTwigBridgeDirectory.'/Resources/views/Form',
@@ -41,6 +47,7 @@ class View{
         $twig->addExtension(new TranslationExtension($translator));
         $twig->addExtension(new FormExtension());
         $twig->addExtension(new Filter());
+//        $twig->addExtension(new Project_Twig_Extension());
         return $twig->render($path, $content);
     }
 

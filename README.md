@@ -1,4 +1,4 @@
-# Devpyjoh starter
+# OLPHP
 A Simple PHP Framework for creating web applications
 
 [![Latest Version](https://img.shields.io/github/tag/NyirendaJr/devpyjoh-starter.svg)](https://github.com/NyirendaJr/devpyjoh-starter/releases)
@@ -12,6 +12,6 @@ Licensed under the [MIT license](https://opensource.org/licenses/MIT).
 ## Installation
 
 ```sh
-composer create-project devpyjoh/devpyjoh-starter project-name
+composer create-project olphp/olphp project-name
 ```
 
