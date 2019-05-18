@@ -11,9 +11,15 @@ use Models\User;
 
 class UserController{
 
-    public static function createUser($name){
-        return User::create(['name' => $name]);
+    public static function createUser($username, $email, $password){
+        $user = User::create([
+            'username'=>$username,
+            'email'=>$email,
+            'password'=>$password
+        ]);
+        return $user;
     }
+
 
     public static function getAllUser(){
         return User::all();

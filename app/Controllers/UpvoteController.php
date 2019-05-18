@@ -1,0 +1,14 @@
+<?php
+
+namespace Controllers;
+use Models\Upvote;
+class UpvoteController{
+
+    public static function upvoteAnswer($answer_id,$user_id){
+        return Upvote::create([
+            'answer_id'=>$answer_id,
+            'user_id'=>$user_id
+        ]);
+
+    }
+}

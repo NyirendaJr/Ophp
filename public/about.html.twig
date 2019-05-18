@@ -15,14 +15,15 @@
 
 <body>
 <main role="main" class="container">
-    <div class="starter-template">
-        <form action="/about" method="POST">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="name" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+    <div>
+        {% for q in qs %}
+            <h2>{{ q.question }}</h2>
+            <ul>
+                {% for a in q.answers %}
+                <li>{{ a.answer }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
     </div>
 </main>
 </body>

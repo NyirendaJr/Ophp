@@ -8,7 +8,6 @@ use Symfony\Component\Debug\Debug;
 use Symfony\Component\Debug\ErrorHandler;
 use Symfony\Component\Debug\DebugClassLoader;
 
-
 Debug::enable();
 ErrorHandler::register();
 DebugClassLoader::enable();
@@ -16,6 +15,9 @@ DebugClassLoader::enable();
 use Phinx\Db\Table\Column;
 use Phinx\Db\Adapter\AdapterInterface;
 use Phinx\Db\Table\Table;
+use Controllers\QuestionController;
+use Controllers\AnswerController;
+use Controllers\UpvoteController;
 
 class HomeView extends GlobalView
 {
@@ -36,24 +38,19 @@ class HomeView extends GlobalView
 
 class AboutView extends GlobalView
 {
+
     public function get($request,$response){
-        if (isset($_GET['name'])){
-            error_log("Hello",4);
-            return "Hello world2";
-        }
-        $form = Form::createForm([
-            'email'=>'email',
-            'password' => 'text'
-        ]);
-        return View::render("about.html.twig",[
-            "title"=>"devpyjoh starter",
-            "form"=>$form
-        ]);
+        //return UserController::createUser("Alex", "example.com", "12345");
+        //return QuestionController::createQuestion("What is your name", 1);
+        //return AnswerController::addAnswer("The brain", 1, 3);
+        //return UpvoteController::upvoteAnswer(1, 1);
+        $qs = QuestionController::getQuestionWithAnswers();
+        return View::render("about.html.twig",['qs' => $qs]);
+
     }
 
     public function post($request,$response, $service){
-        UserController::createUser($request->name);
-        View::redirect("/");
+
     }
 }
 
